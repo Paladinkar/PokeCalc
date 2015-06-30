@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Type{
 	private String name; 
 	protected float[] values; 
-	private int value; //This value is for the type's value in the type chart
+	protected int value; //This value is for the type's value in the type chart
 	//Values are for the ATTACKING type and its effectiveness against every defending type
 	
 	Type(String name, int value, float[] values){

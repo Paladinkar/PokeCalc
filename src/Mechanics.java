@@ -2,7 +2,6 @@
 public class Mechanics {
 	
 	
-	private TD td = new TD(); 
 	
 //	public void attack(/*Not sure what params yet*/){
 			//DO STUFF
@@ -40,9 +39,9 @@ public class Mechanics {
 	public static void main(String[] args){
 		Mechanics m = new Mechanics();
 		//TypeData td = new TypeData(); 
-		Move hydroPump = new Move("Hydro Pump", "Terns o' damage", TD.WTR, 120, 80, "Special");
-		Pokemon blastoise = new Pokemon("Blastoise", TD.WTR, hydroPump);
-		Pokemon golem = new Pokemon("Golem", TD.RCK, hydroPump); //lol, fix this
+		Move hydroPump = new Move("Hydro Pump", "Terns o' damage", TD.WTR.getType(), 120, 80, "Special");
+		Pokemon blastoise = new Pokemon("Blastoise", TD.WTR.getType(), hydroPump);
+		Pokemon golem = new Pokemon("Golem", TD.RCK.getType(), hydroPump); //lol, fix this
 		//System.out.println(hydroPump.type);
 		System.out.println(m.attack(hydroPump, blastoise, golem));
 		
