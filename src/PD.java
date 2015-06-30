@@ -2,13 +2,12 @@
 public enum PD {
 	
 	///FIRST 150
-	 Pika("Pikachu", TD.ELE, MD.ThunderBolt); 
+	 Pika("Pikachu", TD.ELE, MoD.ThunderBolt); 
 	
-	Pokemon poke; 
+	private Pokemon poke; 
 	
-	private PD(String name, TD type, MD m1){
-		Pokemon poke = new Pokemon(name, type.getType(), m1.getMove());
-		this.poke = poke; 
+	private PD(String name, TD type, MoD m1){
+		this.poke = new Pokemon(name, type.getType(), m1.getMove());
 	}
 	
 	public Pokemon getPoke(){

@@ -36,9 +36,9 @@ public enum TD {
 	
 	
 	private Type type; 
+	
 	private TD(String name, int value, float[] values){
-		Type type = new Type(name, value, values);
-		this.type = type; 
+		this.type = new Type(name, value, values);
 	}
 	
 	public Type getType(){
