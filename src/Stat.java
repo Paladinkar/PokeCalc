@@ -1,26 +1,34 @@
 
 public class Stat {
-	float multiplyer = 1.0f; 
+	double multiplyer = 2/2; 
 	int base; 
+	int value = 0;  
+	double evs; 
+	int iv; 
 	
-	public void changeMult(){
-		//put in logic, this can either parse a sting to determine sharply 	
-		//or hashly or whatever, or it can just be fed an integer value (prolly better) 
-		//this will in turn determine the multiplyer
+	
+	public void setValue(int value){
+		this.value += value; 
+	}
+	
+	public void setMult(float value){
+			if(value > 0){
+				multiplyer = (value + 2)/2; 
+			}
+			
+			if(value < 0){
+				multiplyer = 2/(Math.abs(value) + 2); 
+			}
+			
+			else multiplyer = 2/2; 
 	}
 	
 	public double finalStat(){
-		return base * multiplyer; 
+		return (base + iv + evs/4) * multiplyer; 
 	}
 	
 	public Stat(int base){
 		this.base = base; 
 	}
-	
-	
-	//might need to make this work with an int array for all stats
-	public int evConversion(int ev){
-			return ev/4; 
-	}
-	
+
 }

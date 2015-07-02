@@ -14,9 +14,6 @@ public enum PD {
 		return poke;
 	}
 	
-	
-	
-	
 	public static void main(String[] args){
 		System.out.println(PD.Pika.getPoke().t1);
 	}

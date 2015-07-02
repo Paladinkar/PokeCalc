@@ -9,7 +9,7 @@ public class Move {
 	String damageType; //This might need to be a class...we shall see, or maybe
 		// it can be integrated into teh atk or spAtk stat
 	
-	//There needs to be some way to indicate effects; 
+	//There needs to be some way to bonus effects of the move, and to intepret this. 
 
 	public Move(String name, String description, Type type, int basePow, int accuracy, String damageType){
 		this.name = name; 

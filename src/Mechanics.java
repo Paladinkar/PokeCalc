@@ -1,20 +1,7 @@
 
 public class Mechanics {
-	
-	
-	
-//	public void attack(/*Not sure what params yet*/){
-			//DO STUFF
-			//Print out result of attack, i.e. attack damage against opponent
-		
-			//parms will likely be, attacking pkmn, def pkmn, att/spATk, def/spDef, move
-		//float STAB = determineSTAB() ****FILL in params later; 
-		//float typeBonus = typeMechanics() ***Fill in params
-	//	}
-	
-	//fix to not return a float once implementation is figured, also prompt user 
-			//for move instead of using default
-	private float attack(Move atk, Pokemon atkr, Pokemon def){
+
+	public float attack(Move atk, Pokemon atkr, Pokemon def){
 		 //need to add in logic for abilites that change the default behavior of type matchups
 			//based of the attack, have to determine whether to use atk/def or spA/spD
 		if(def.t2 == null)
@@ -35,19 +22,12 @@ public class Mechanics {
 			return 1; 
 	}
 	
-	
 	public static void main(String[] args){
 		Mechanics m = new Mechanics();
-		//TypeData td = new TypeData(); 
 		Move hydroPump = new Move("Hydro Pump", "Terns o' damage", TD.WTR.getType(), 120, 80, "Special");
 		Pokemon blastoise = new Pokemon("Blastoise", TD.WTR.getType(), hydroPump);
 		Pokemon golem = new Pokemon("Golem", TD.RCK.getType(), hydroPump); //lol, fix this
-		//System.out.println(hydroPump.type);
 		System.out.println(m.attack(hydroPump, blastoise, golem));
-		
 	}
-
-
-	
 	
 }
